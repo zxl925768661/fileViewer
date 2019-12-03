@@ -1,0 +1,57 @@
+.com-fileViewer {
+    overflow: hidden; 
+    display: flex; 
+    justify-content: space-between; 
+    flex-direction: column; 
+    background-color: rgba(0, 0, 0, 0.75); 
+    position: fixed; 
+    z-index: 9998; 
+    top: 0px; 
+    right: 0px; 
+    left: 0px; 
+    bottom: 0px;
+    height: 100%;
+    overflow: auto;
+    &.content100 {
+        .com-fileViewer-header {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .com-fileViewer-content {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .com-fileViewer-header {
+        display: flex; 
+        justify-content: flex-end;
+    }
+    .com-fileViewer-control {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        color: #fff; 
+        text-align: center; 
+        padding: 10px; 
+        background-color: #333; 
+        cursor: pointer;
+    }
+    .com-fileViewer-content {
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        video, audio {
+            height: calc(100% - 70px);
+        }
+    }
+    .com-fileViewer-item {
+        max-width: 80%; 
+        max-height: 80%; 
+        align-self: center;
+    }
+    .canvasWrapper {
+        position: relative;
+        margin: 0 auto;
+    }
+}
